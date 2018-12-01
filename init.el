@@ -376,11 +376,11 @@
 
 (use-package projectile)
 
-(defvar completion-system "ivy"
-  "Sets the completion system to use - helm or ivy")
+(defvar narrowing-system "ivy"
+  "Sets the narrowing system to use - helm or ivy")
 
 (use-package ivy
-    :if (equal completion-system "ivy")
+    :if (equal narrowing-system "ivy")
     :hook (after-init . ivy-mode)
     :config (setq ivy-use-virtual-buffers t
                 ivy-count-format "(%d/%d) "
@@ -391,7 +391,7 @@
     (tyrant-def "bm"  'ivy-switch-buffer))
 
 (use-package smex
-  :if (equal completion-system "ivy"))
+  :if (equal narrowing-system "ivy"))
 
 (use-package counsel
   :after (ivy)
@@ -403,7 +403,7 @@
     "fL"  'counsel-locate))
 
 (use-package flyspell-correct-ivy
-  :if (equal completion-system "ivy")
+  :if (equal narrowing-system "ivy")
   :commands (flyspell-correct-word-generic)
   :general
    (:keymaps '(flyspell-mode-map)
@@ -425,7 +425,7 @@
 
 
 (use-package helm
-  :if (equal completion-system "helm")
+  :if (equal narrowing-system "helm")
   :hook (after-init . helm-mode)
   :config (require 'helm-config)
   :commands (helm-mini
@@ -443,7 +443,7 @@
    "fL"  'helm-locate))
 
 (use-package helm-flyspell
-  :if (equal completion-system "helm")
+  :if (equal narrowing-system "helm")
   :commands (helm-flyspell-correct)
   :general
    (:keymaps '(flyspell-mode-map)
