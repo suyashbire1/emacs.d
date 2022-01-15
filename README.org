@@ -1,3 +1,5 @@
-This is a minimal init file that creates a Spacemacs like setup using [[https://github.com/noctuid/general.el][general.el]], [[https://github.com/jwiegley/use-package][use-package]], and evil.
+- This is a minimal init file that creates a Spacemacs like setup using [[https://github.com/noctuid/general.el][general.el]], [[https://github.com/jwiegley/use-package][use-package]], evil, and [[https://github.com/emacs-evil/evil-collection][evil-collection]].
 
-You can choose your narrowing system by setting the variable ~narrowing-system~ to either "helm" or "ivy".
+- Employs [[https://github.com/minad/vertico][vertico]], [[https://github.com/oantolin/embark][embark]], [[https://github.com/minad/consult][consult]], [[https://github.com/minad/marginalia][marginalia]], and [[https://github.com/oantolin/orderless][orderless]] for completion.
+
+- Uses the freshly minted org-cite citation backend along with [[https://github.com/bdarcus/citar][citar]] in org-mode. You'll need org-mode version 9.5 or later.
